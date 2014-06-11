@@ -6,7 +6,7 @@ miita は社内で使える Qiita を目指しています。
 
 ## 使い方(Vagrant + Docker編)
 ```
-$ git clone git@github.com:YungSang/miita.git -b docker
+$ git clone https://github.com/YungSang/miita.git -b docker
 $ cd miita/contrib
 $ vagrant up
 $ open http://localhost:5000
