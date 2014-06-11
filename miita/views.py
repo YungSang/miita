@@ -14,8 +14,8 @@ bp = flask.Blueprint('miita', __name__)
 def get_user():
     u"""flask.g.user を GoogleAuth が作ったオブジェクトから models.User に置き換える."""
     user = flask.g.user
-    email = user.email
-    name = user.last_name + ' ' + user.first_name
+    email = user['email']
+    name = user['last_name'] + ' ' + user['first_name']
     user, _ = User.objects.get_or_create(name=name, email=email)
     flask.g.user = user
 
